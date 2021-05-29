@@ -1,6 +1,6 @@
 # Natours - Tourist agency website
 site is online at:
-[https://test-natours.netlify.app/#section-tours](https://test-natours.netlify.app/#section-tours)
+[https://test-natours.netlify.app](https://test-natours.netlify.app)
 
 This website was created for the purpose of learning advanced CSS building techniques and features.
 Things covered by this project are among others:
