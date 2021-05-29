@@ -1,0 +1,87 @@
+.section-about {
+    background-color: $color-gray-light-1;
+    padding: 7rem 2rem;
+    
+}
+.section-features-wrapper {
+    background-color: $color-gray-light-1;
+}
+.section-features {
+    // by default padding and clip shape are dynamically calculated in JS to maintain the clipping angle on resize
+    // padding and shape defined here are fallback in case JS is not enabled, angle is controlled by breakpoints
+    padding: calc(25vh + 30px) 0;
+    clip-path: polygon(0 25vh, 100% 0, 100% calc(100% - 25vh), 0 100%);
+
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.8),rgba($color-primary-dark, 0.8)), url(../img/nat-4-small.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    //For high dpi screens OR lower dpi big resolution screens (>2000px)
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4.jpg);
+
+    }
+
+    & .row {
+        padding: 3rem 3rem;
+    }
+
+    @include respond(phone) {
+        clip-path: polygon(0 15vh, 100% 0, 100% calc(100% - 15vh), 0 100%);
+        padding: calc(15vh + 30px) 0;
+    }
+    
+}
+
+.section-tours {
+    background-color: $color-gray-light-1;
+    padding: 7rem 3rem 10rem 3rem;
+}
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+
+        & .row {
+            max-width: 71rem;
+        }
+    }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    
+    @include respond(tab-port){
+        padding: 10rem 0;
+
+        & .row {
+            max-width: 61rem;
+        }
+    }
+}
+
+.book {
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../img/nat-10-small.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: $book-shadow;
+
+    //For high dpi screens OR lower dpi big resolution screens 
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+        background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../img/nat-10.jpg);
+
+    }
+
+    @include respond(tab-land){
+        background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 65%, transparent 65%), url(../img/nat-10-small.jpg);
+    }
+
+    @include respond(tab-port){
+        background-image: linear-gradient(to right, rgba($color-white, .9) 0%, rgba($color-white, .9) 100%), url(../img/nat-10-small.jpg);
+    }
+
+}
