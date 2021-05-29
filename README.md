@@ -25,8 +25,9 @@ Things covered by this project are among others:
 
 I implemented 2 simple JS scripts only to add small functionality to the site.
 - First one is to automatically calculate and maintain the desired angle of the clip-path polygon as the screen width changes using resize observer API.
+  In case the user has disabled JS, the fallback is using media query breakpoints to keep the angle within the acceptable margins.
 - The second one is to close the navigation when user clicks anywhere within it.
-In case the user has disabled JS, the fallback is using media query breakpoints to keep the angle within the acceptable margins.
+
 Since the focus of this project was to use CSS to its maximum potential i kept the JavaScript to a bare minimum.
 
 
